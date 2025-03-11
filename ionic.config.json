@@ -1,0 +1,7 @@
+{
+  "name": "WATEST",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
