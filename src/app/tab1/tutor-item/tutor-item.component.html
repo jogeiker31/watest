@@ -1,0 +1,58 @@
+<ion-item button detail="true" (click)="setOpen(true)">
+  <ion-avatar slot="start">
+    <img [src]="'https://picsum.photos/200/200?random=' + index" alt="avatar" />
+  </ion-avatar>
+  <ion-label>
+    <h2>{{ tutor.first_name }} {{ tutor.last_name }}</h2>
+    <p>{{tutor.speciality}}</p>
+  </ion-label></ion-item
+>
+
+<ion-modal  [isOpen]="isModalOpen">
+  <ng-template>
+    <div class="gradient">
+      <ion-title>Tutor</ion-title>
+      <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372 15">
+        <path
+          d="M349.8 1.4C334.5.4 318.5 0 302 0h-2.5c-9.1 0-18.4.1-27.8.4-34.5 1-68.3 3-102.3 4.7-14 .5-28 1.2-41.5 1.6C84 7.7 41.6 5.3 0 2.2v8.4c41.6 3 84 5.3 128.2 4.1 13.5-.4 27.5-1.1 41.5-1.6 33.9-1.7 67.8-3.6 102.3-4.7 9.4-.3 18.7-.4 27.8-.4h2.5c16.5 0 32.4.4 47.8 1.4 8.4.3 15.6.7 22 1.2V2.2c-6.5-.5-13.8-.5-22.3-.8z"
+          fill="#fff"
+        ></path>
+      </svg>
+    </div>
+
+
+
+
+    <ion-content class="ion-padding">
+      <div class="center">
+        <ion-avatar style="width: 200px; height: 200px; object-fit: cover">
+          <img
+            [src]="'https://picsum.photos/200/200?random=' + index"
+            alt="avatar"
+          />
+        </ion-avatar>
+      </div>
+      <div class="center">
+        <h2>{{ tutor.first_name }} {{ tutor.last_name }}</h2>
+      </div>
+      <ion-label>
+        <p>Email: {{ tutor.email }}</p>
+        <p>Teléfono: {{ tutor.phone }}</p>
+        <p>Fecha de nacimiento: {{ tutor.birth_date }}</p>
+        <p>Especialidad: {{ tutor.speciality }}</p>
+        <p>Estado: {{ tutor.status }}</p>
+        </ion-label
+      >
+    </ion-content>
+
+    <div style="padding: 20px">
+      <ion-button
+        expand="full"
+        (click)="setOpen(false)"
+        shape="round"
+        color="primary"
+        >Cerrar</ion-button
+      >
+    </div>
+  </ng-template>
+</ion-modal>

@@ -15,13 +15,13 @@ Antes de ejecutar el proyecto, asegúrate de tener instaladas las siguientes her
    git clone https://github.com/usuario/nombre-del-repo.git
    cd nombre-del-repo
 
-##  Instalar dependencias:
+2. **Instalar dependencias:**
+   ```sh
+    npm install
 
-npm install
-
-##  Ejecutar la aplicación en modo desarrollo:
-
-ionic serve
+3. ** Ejecutar la aplicación en modo desarrollo:**
+   ```sh
+    ionic serve
 
 ### Luego, abre en tu navegador http://localhost:8100/.
 

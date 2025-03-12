@@ -1,0 +1,30 @@
+ion-item {
+  
+    &:active {
+      --color: white;
+      --background: var(--ion-color-primary); // Color cuando lo presionas
+    }
+    --background-hover: var(--ion-color-primary);
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .gradient {
+    background: var(--ion-gradient);
+    color: white;
+    padding-top: 20px;
+    height: 80px;
+    position: relative;
+  }
+  
+  .svg {
+    position: absolute;
+    width: calc(100% + 10px);
+    height: 26px;
+    bottom: -14px;
+    left: -4px;
+  }
+  

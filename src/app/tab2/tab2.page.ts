@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-tab2',
@@ -6,8 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss'],
   standalone: false,
 })
-export class Tab2Page {
+export class Tab2Page implements OnInit {
+  constructor(private userService: UserService) {}
 
-  constructor() {}
+  ngOnInit(): void {
+    this.userService.getUsers();
+  }
 
+  get users() {
+    return this.userService.users;
+  }
+
+  get isLoading() {
+    return this.userService.isLoading;
+  }
 }

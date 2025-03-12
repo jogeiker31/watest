@@ -1,17 +1,33 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+  <ion-toolbar color="primary">
+    <ion-title> Tutores </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  @if(isLoading){
+  <div class="loading">
+    <ion-spinner color="secondary"></ion-spinner>
+  </div>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  }@else{
+
+  <ion-item>
+    <ion-label>Filtrar por Especialidad:</ion-label>
+    <ion-select [(ngModel)]="selectedSpeciality" (ionChange)="filterTutors()">
+      <ion-select-option value="">Todas</ion-select-option>
+      <ion-select-option value="Advanced">Advanced</ion-select-option>
+      <ion-select-option value="Intermediate">Intermediate</ion-select-option>
+      <ion-select-option value="Fluent">Fluent</ion-select-option>
+      <ion-select-option value="Beginner">Beginner</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-list>
+    @for (tutor of filteredTutors; track tutor.id; let index = $index) {
+    <tutor-item [tutor]="tutor" [index]="index"></tutor-item>
+
+    }
+  </ion-list>
+  }
 </ion-content>

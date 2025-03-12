@@ -1,3 +1,28 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<ion-split-pane contentId="main-content">
+  <ion-menu contentId="main-content" style="border-inline-end: none">
+    <ion-content>
+      <div class="center">
+        <img
+          src="https://worldsacross.com/wp-content/uploads/2023/10/Worldsacross-logo.png"
+          alt=""
+        />
+      </div>
+      <ion-list>
+        <ion-item routerLink="/tabs/tutores">
+          <ion-icon aria-hidden="true"  style="margin-right: 10px;" name="school-outline"></ion-icon>
+          Tutores</ion-item
+        >
+        <ion-item routerLink="/tabs/usuarios">
+          <ion-icon aria-hidden="true"  style="margin-right: 10px;" name="people-outline"></ion-icon>
+          Usuarios</ion-item
+        >
+        <ion-item routerLink="/tabs/reservas">
+          <ion-icon aria-hidden="true" style="margin-right: 10px;"  name="calendar-outline"></ion-icon>
+          Reservas</ion-item
+        >
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-split-pane>
