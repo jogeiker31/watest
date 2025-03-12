@@ -12,8 +12,8 @@ Antes de ejecutar el proyecto, asegúrate de tener instaladas las siguientes her
 ## 🚀 Instalación y Ejecución  
 1. **Clonar el repositorio:**  
    ```sh
-   git clone https://github.com/usuario/nombre-del-repo.git
-   cd nombre-del-repo
+   git clone https://github.com/jogeiker31/watest
+   cd watest
 
 2. **Instalar dependencias:**
    ```sh
